@@ -5,7 +5,7 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 var canvas;
-var playerbase,player,computerplayer,Computerbase;
+var playerbase,player,computerplayer,computerbase;
 
 
 function setup() {
@@ -16,16 +16,16 @@ function setup() {
   world = engine.world;
 	
    //Create Player Base and Computer Base Object
-   playerbase=new Playerbase(300,random(450,height-300),180,500);
+   playerbase=new PlayerBase(300,random(450,height-300),180,500);
    player=new Player(285,playerbase.body.position.y-153,50,180);
 
-   computerBase = new ComputerBase(
+   computerbase = new ComputerBase(
     width - 300,
     random(450, height - 300),
     180,
     150
   );
-  computer = new Computer(
+  computer = new ComputerPlayer(
     width - 280,
     computerBase.body.position.y - 153,
     50,
